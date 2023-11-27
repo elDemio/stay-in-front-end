@@ -1,0 +1,79 @@
+.host-panel-container {
+    padding: 0 6.4% 0 6%;
+}
+
+.host-places-count {
+    font-size: 24px;
+}
+
+.host-add-stay {
+    padding: 1.3rem 1.3rem 1.3rem 14px;
+    height: 40px;
+    background: var(--primary-color);
+}
+
+.host-add-stay-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: inherit;
+    margin-bottom: 0;
+}
+
+.host-filters-container {
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.input-group {
+    height: 46px;
+    width: 25rem;
+}
+
+.search-form-input {
+    width: 85%;
+    height: 15%;
+    border-radius: 4px;
+    height: auto;
+    border: .5px solid var(--acent-color);
+    text-indent: 6px;
+}
+
+.search-form-input:focus {
+    outline: none;
+    box-shadow: none;
+    border: .5px solid var(--secondary-color);
+}
+
+tbody {
+    vertical-align: middle;
+}
+
+.host-table-place-title {
+    font-family: inherit;
+    margin-bottom: 0;
+}
+
+#action-buttons>span {
+    color: var(--primary-color);
+    vertical-align: middle;
+}
+
+#host-table-place-cover {
+    width: 130px;
+    height: 60pt;
+    border: 1px solid var(--acent-color);
+    border-radius: 10px;
+}
+
+#warning-icon{
+    font-size: 66px;
+    font-weight: bold;
+}
+
+#delete-place-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
