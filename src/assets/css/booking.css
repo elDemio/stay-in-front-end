@@ -322,3 +322,57 @@ li {
 .transfer-label{
     font-size: 16px;
 }
+
+.reserved {
+    border: none;
+    text-decoration: line-through;
+    pointer-events: none;
+    color: #d6cfcf;
+}
+
+.btn-bitcoin {
+    display: flex;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    margin: auto;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.qr-code {
+    width: 330px;
+    height: 330px;
+    margin: auto;
+}
+
+.qr-code img {
+    width: 100%;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1.5s linear infinite;
+    display: none;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#check {
+    display: none;
+    font-size: 18px;
+    font-weight: bold;
+}

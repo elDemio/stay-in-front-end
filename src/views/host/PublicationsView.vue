@@ -249,9 +249,8 @@ const closeWindow = () => {
 }
 
 onMounted(() => {
-    getHostProperties();
+    getHostProperties()
 })
-
 </script>
 
 <template>
@@ -699,7 +698,6 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-
     </main>
 </template>
 

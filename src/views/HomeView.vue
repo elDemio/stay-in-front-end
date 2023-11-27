@@ -46,7 +46,6 @@ watch(selectedCategory, (newValue) => {
         filteredPlaces.value = places.value.filter(place => place.category.category_id === newValue);
     }
 });
-
 </script>
 
 <template>

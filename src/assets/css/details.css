@@ -6,6 +6,46 @@ hr {
     padding: 0 3.8% 0 3.8%;
 }
 
+.col-back-home {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.col-back-home span {
+    font-size: 2.5rem;
+    margin-left: -8px;
+}
+
+.custom-width {
+    width: 80rem;
+}
+
+.col-tooltip {
+    position: absolute;
+    left: 10rem;
+    background: var(--primary-color);
+    padding: .5rem;
+    border-radius: 6px;
+    top: 11rem;
+    font-size: 12px !important;
+    color: white;
+    opacity: 0;
+    transition: opacity .6s ease-in-out;
+}
+
+.col-tooltip span {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.col-back-home:hover .col-tooltip {
+    opacity: 1;
+}
+
 .stay-title {
     font-size: 32px;
     font-weight: 500;

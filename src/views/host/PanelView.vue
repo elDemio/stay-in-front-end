@@ -94,7 +94,6 @@ onMounted(() => {
     getHostPanelProperties();
     getHostBookings();
 })
-
 </script>
 
 <template>
@@ -102,10 +101,10 @@ onMounted(() => {
         <div class="container-fluid host-panel-container mt-5">
 
             <h1 class="host-welcome-heading d-flex">
-                <div class="col-back-home me-3" @click="this.$router.go(-1)">
-                    <a>
-                        
-                    </a>
+                <div class="col-back-home me-3" role="button" @click="this.$router.go(-1)">
+                    <span class="material-symbols-sharp">
+                        arrow_back
+                    </span>
                 </div>
                 Bienvenido, {{ authStore.user }}
             </h1>
@@ -136,6 +135,7 @@ onMounted(() => {
                             </button>
                         </div>
                     </div>
+
                     <div v-show="showReservas">
                         <div class="col-12 p-5 bg-light border d-flex justify-content-center align-items-center"
                             v-if="hostBookings.length === 0" style="height: 200px;">
@@ -201,6 +201,7 @@ onMounted(() => {
                                 Aquí irán apareciendo las reservas finalizadas.
                             </h3>
                         </div>
+                        
                         <table class="table border-top" v-else>
                             <thead>
                                 <tr>
@@ -404,7 +405,6 @@ onMounted(() => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="card col-lg-12 mt-3 mb-3 mx-auto">
@@ -440,6 +440,7 @@ onMounted(() => {
                         </div>
                     </div>
                 </div>
+
                 <div class="modal-footer d-flex justify-content-center">
                     <button class="btn btn-cancel " data-bs-dismiss="modal">
                         Cerrar detalle
@@ -454,9 +455,4 @@ onMounted(() => {
 @import url('../../assets/css/host/panel.css');
 
 @import url('../../assets/css/guest/bookings.css');
-
-.selected-label {
-    border: 2px solid var(--primary-color);
-    text-shadow: 1px 1px 2px var(--acent-color);
-}
 </style>

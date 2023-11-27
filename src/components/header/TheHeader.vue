@@ -44,7 +44,6 @@ const user_login = () => {
     userLogin.value = true;
     userRegister.value = false;
 };
-
 </script>
 
 <template>

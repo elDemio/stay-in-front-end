@@ -19,7 +19,6 @@ const cities = ref([])
 const categories = ref([])
 const subcategories = ref([])
 const roomstypes = ref([])
-
 const coverImageSrc = ref('')
 const photos = ref([])
 const selectedCategory = ref(null)
@@ -153,14 +152,15 @@ function submitForm() {
             console.error('Error al realizar la solicitud POST:', error);
         });
 }
-
 </script>
 
 <template>
     <div class="container">
         <div class="section mt-3 margin-botton shadow-sm" v-if="activeSection === 1">
             <h2>
-                <strong>Describe tu espacio</strong>
+                <strong>
+                    Describe tu espacio
+                </strong>
             </h2>
             <div class="add-place-info">
                 <div class="col-12 d-grid align-items-center mt-4 mb-4">

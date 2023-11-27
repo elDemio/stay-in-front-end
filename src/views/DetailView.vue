@@ -67,37 +67,6 @@ const comeBack = () => {
 </script>
 
 <template>
-    <section class="container mt-4 mb-4 d-none" id="custom-container">
-        <h1 class="col-lg-12 stay-title">
-            {{ placeDetail.name }}
-        </h1>
-        <div class="col-lg-12 icons d-flex align-items-center mb-2">
-            <div class="col-lg-6 d-flex justify-content-start">
-                <span class="material-symbols-sharp">
-                    location_on
-                </span>
-                <h2 class="mx-1 p-0 mb-0 stay-location">
-                    {{ placeDetail.location }}
-                </h2>
-            </div>
-            <div class="col-lg-6 d-flex justify-content-end">
-                <span class="material-symbols-sharp">
-                    share
-                </span>
-                <span role="button" class="me-4 mx-1" @click="sharePlaceLink" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                    Compartir
-                </span>
-                <span class="material-symbols-sharp">
-                    favorite
-                </span>
-                <span class="mx-1">
-                    Mi favorito
-                </span>
-            </div>
-        </div>
-    </section>
-
     <section class="container mt-4 mb-4" id="custom-container">
         <div class="col-12 d-flex">
 
@@ -111,6 +80,7 @@ const comeBack = () => {
                     </span>
                 </div>
             </div>
+
             <div class="custom-width">
                 <h1 class="col-lg-12 stay-title">
                     {{ placeDetail.name }}
@@ -141,47 +111,6 @@ const comeBack = () => {
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="container mt-4 mb-4 d-none" id="custom-container">
-        <div class="col-12 d-flex">
-            <div class="col-back-home" @click="this.$router.go(-1)">
-                <span class="material-symbols-sharp">
-                    arrow_back
-                </span>
-            </div>
-            <div class="custom-width">
-                <h1 class="col-lg-12 stay-title bg-info">
-                    {{ placeDetail.name }}
-                </h1>
-                <div class="col-lg-12 icons d-flex align-items-center mb-2 bg-warning">
-                    <div class="col-lg-6 d-flex justify-content-start">
-                        <span class="material-symbols-sharp">
-                            location_on
-                        </span>
-                        <h2 class="mx-1 p-0 mb-0 stay-location">
-                            {{ placeDetail.location }}
-                        </h2>
-                    </div>
-                    <div class="col-lg-6 d-flex justify-content-end">
-                        <span class="material-symbols-sharp">
-                            share
-                        </span>
-                        <span role="button" class="me-4 mx-1" @click="sharePlaceLink" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            Compartir
-                        </span>
-                        <span class="material-symbols-sharp">
-                            favorite
-                        </span>
-                        <span class="mx-1">
-                            Mi favorito
-                        </span>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -378,44 +307,4 @@ const comeBack = () => {
 
 <style scoped>
 @import url('../assets/css/details.css');
-
-.col-back-home {
-    width: 60px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.col-back-home span {
-    font-size: 2.5rem;
-    margin-left: -8px;
-}
-
-.custom-width {
-    width: 80rem;
-}
-
-.col-tooltip {
-    position: absolute;
-    left: 10rem;
-    background: var(--primary-color);
-    padding: .5rem;
-    border-radius: 6px;
-    top: 11rem;
-    font-size: 12px !important;
-    color: white;
-    opacity: 0;
-    transition: opacity .6s ease-in-out;
-}
-
-.col-tooltip span {
-    font-size: 1.3rem;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.col-back-home:hover .col-tooltip {
-    opacity: 1;
-}
 </style>

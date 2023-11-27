@@ -14,7 +14,6 @@ import {
     toggleHistory
 } from '../../assets/v-functions/bookings';
 
-const guestBookings = ref([])
 const activeBookings = ref([]);
 const inactiveBookings = ref([]);
 const selectedBooking = ref([])
@@ -56,13 +55,9 @@ const filterInactiveBookings = (bookings) => {
 onMounted(async () => {
     try {
         const bookResponse = await axios.get('/api/v1/bookingsuser');
-        console.log('Respuesta de la API:', bookResponse.data);
         const data = bookResponse.data.data;
         activeBookings.value = filterActiveBookings(data)
         inactiveBookings.value = filterInactiveBookings(data)
-
-        console.log('Reservas activas:', activeBookings.value);
-        console.log('Reservas inactivas:', inactiveBookings.value);
 
     } catch (error) {
         console.error('Error al obtener la fecha desde la API:', error);
@@ -336,7 +331,6 @@ onMounted(async () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="card col-lg-12 mt-3 mb-3 mx-auto">
@@ -372,6 +366,7 @@ onMounted(async () => {
                         </div>
                     </div>
                 </div>
+
                 <div class="modal-footer d-flex justify-content-center">
                     <button class="btn btn-cancel " data-bs-dismiss="modal">
                         Cerrar detalle

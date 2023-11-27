@@ -54,7 +54,6 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
 });
-
 </script>
 
 <template>
